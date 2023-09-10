@@ -25,14 +25,15 @@ function App() {
           phone: "123-456-7890",
         },
       ]);
-    }, 500);
+    }, 1000);
   }, []);
 
   if (!users) {
     return <p>Loading..</p>;
   }
 
-  const userCards = users.map((user) => <UserCard key={user.name} user={user} />);
+  const userCards = users.map((user) => <UserCard user={user} />);
+  console.log(users)
 
   return (
     <div>
