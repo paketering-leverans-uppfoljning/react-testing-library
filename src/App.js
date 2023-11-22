@@ -32,8 +32,7 @@ function App() {
     return <p>Loading..</p>;
   }
 
-  const userCards = users.map((user) => <UserCard user={user} />);
-  console.log(users)
+  const userCards = users.map((user) => <UserCard key={user.name} user={user} />);
 
   return (
     <div>
